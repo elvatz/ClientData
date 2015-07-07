@@ -19,11 +19,11 @@ function get_data(){
 				success : function(data){
 						AmbilData = data.client;
 							$('#loading').hide();
-							$('#tampilData').show();
+							$('#tampilData').show(); 
 							$.each(AmbilData, function(index, loaddata) {
 							$('#dataList').append(
-								'<li><a onClick="alert(\''+ loaddata.saldo_credit + '\');" data-ajax="false">'+ loaddata.client_name + '</a></li>');
-							});
+								'<tr><td><a onClick="alert(\''+ loaddata.saldo_credit + '\');" data-ajax="false">'+ loaddata.client_name + '</a></td></tr>');
+							}); 
 				},
 				error: function(jqXHR, exception) {
 					$('#loading').hide();
